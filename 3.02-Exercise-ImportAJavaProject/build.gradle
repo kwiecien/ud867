@@ -20,3 +20,21 @@ solution file into this one.
 */
 
 //apply from: "solution.gradle"
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "com.udacity.gradle.JokeTeller"
+
+task tellJoke {
+    doLast {
+        println "What's a build master's favorite black metal band?"
+        println "Gradle of Filth!"
+    }
+}
+
+task tellAnotherJoke {
+    doLast {
+        println "How long does it take to master build tools?"
+        println "From the Gradle to the grave."
+    }
+}

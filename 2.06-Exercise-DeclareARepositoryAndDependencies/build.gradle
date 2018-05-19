@@ -32,3 +32,12 @@ task printDependencies {
         configurations.compile.each { println it.name }
     }
 }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
